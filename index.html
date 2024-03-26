@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando meu próprio Scratch</title>
+    <link href="./bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./all.min.css" /> <!-- fontawesome -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Scratch</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="resetar()">Resetar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Movimento
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="moverParaEsquerda()">Mover para esquerda</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moverParaDireita()">Mover para direita</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="moverParaCima()">Mover para cima</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="moverParaBaixo()">Mover para baixo</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="girarHorario()">Girar sentido horário</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="girarAntiHorario()">Girar sentido anti-horário</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="deslizarParaCima()">Deslizar para Cima</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="deslizarParaBaixo()">Deslizar para Baixo</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="deslizarParaDireita()">Deslizar para Direita</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="deslizarParaEsquerda()">Deslizar para Esquerda</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="deslizarParaPosicaoAleatoria()">Deslizar para uma posição aleatória</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="apontarParaDirecao()">Aponte para a direção</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="apontarParaDirecaoAleatoria()">Aponte para uma direção aleatória</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="irParaDirecao()">Ir para uma direção </a></li>
+                            <li><a class="dropdown-item" href="#" onclick="irParaDirecaoAleatoria()">Ir para uma direção aleatória</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="seguirMouse()">Seguir o mouse</a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="cbx_setas" onclick="habilitarSetas()" checked>
+                                    <label class="form-check-label" for="cbx_setas">Habilitar setas do teclado</label>
+                                </div>
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Aparência
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="trocarAvatar()">Trocar o avatar</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="resetarAvatar()">Resetar o avatar</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="trocarCenario()">Trocar o cenário</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="resetarCenario()">Resetar o cenário</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="esconderAvatar()">Esconder o avatar</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="mostrarAvatar()">Mostrar o avatar</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="diminuirAvatar()">Diminuir o avatar</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="aumentarAvatar()">Aumentar o avatar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Som
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="dizerOla()">"Dizer" Olá por "n" segundo(s)</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="tocarSom()">Tocar o som</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="pararSom()">Parar o som</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="aumentarVolume()">Aumentar volume</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="diminuirVolume()">Diminuir volume</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Eventos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">
+                                <label for="sel_enquanto">Enquanto </label>
+                                <select class="form-select" id="sel_enquanto" onchange="fazerEnquanto()">
+                                    <option value="1">Mover para direita</option>
+                                </select>
+                                <label for="sel_acao_enquanto"> fazer: </label>
+                                <select class="form-select" id="sel_acao_enquanto" onchange="fazerEnquanto()">
+                                    <option value="1">Mudar a cor de fundo para verde</option>
+                                </select>
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Controle
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">
+                                <label for="sel_teclas">Quando teclar </label>
+                                <select class="form-select" id="sel_teclas" onchange="fazerAoTeclar()">
+                                    <option value="d">d</option>
+                                </select>
+                                <label for="sel_acoes"> fazer: </label>
+                                <select class="form-select" id="sel_acoes" onchange="fazerAoTeclar()">
+                                    <option value="1">Mover para direita</option>
+                                </select>
+                            </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="cbx_memorizar_acoes" onclick="memorizarAcoes()" checked>
+                                    <label class="form-check-label" for="cbx_memorizar_acoes">Memorizar ações</label>
+                                </div>
+                            </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="repetirAcao()">Repetir última ação</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="desfazerAcao()">Desfazer última ação</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                <label for="txt_repetir">Repetir </label>
+                                <input class="form-control" type="text" id="txt_repetir" />
+                                <label for="sel_acao"> a ação: </label>
+                                <select class="form-select" id="sel_acao" onchange="repetirAcao()">
+                                    <option value="1">Mover para a direita</option>
+                                </select>
+                            </a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sensores
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Variáveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item">
+                        <label for="txtMouseX" title="Posição X (top) do Mouse">MouseX:</label>
+                        <input class="form-control col-sm" type="text" id="txtMouseX" disabled />
+                    </li>
+                    <li class="nav-item">
+                        <label for="txtMouseY" title="Posição Y (top) do Mouse">MouseY:</label>
+                        <input class="form-control col-sm" type="text" id="txtMouseY" disabled />
+                    </li>
+                    <li class="nav-item">
+                        <label for="txtAvatarX" title="Posição X (top) do Avatar">AvatarX:</label>
+                        <input class="form-control col-sm" type="text" id="txtAvatarX" value="0"/>
+                    </li>
+                    <li class="nav-item">
+                        <label for="txtAvatarY" title="Posição Y (left) do Avatar">AvatarY:</label>
+                        <input class="form-control col-sm" type="text" id="txtAvatarY" value="0"/>
+                    </li>
+                    <li class="nav-item">
+                        <label for="txtAngulo" title="Ângulo em números">Ângulo:</label>
+                        <input class="form-control col-sm" type="text" id="txtAngulo" value="0"/>
+                    </li>
+                    <li class="nav-item">
+                        <label for="txtPixel" title="Quantidade de pixels em números">Pixel(s):</label>
+                        <input class="form-control col-sm" type="text" id="txtPixel" value="1"/>
+                    </li>
+                    <li class="nav-item">
+                        <label for="txtIntervaloTempo" title="Intervalo de tempo em milissegundos">Tempo:</label>
+                        <input class="form-control col-sm" type="text" id="txtIntervaloTempo" value="200"/>
+                    </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <img src="./avatar.png" id="imgAvatar" />
+
+    <script src="./scratch-prof.js"></script>
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./popper.min.js"></script> 
+    <script src="./all.min.js"></script> <!-- fontawesome -->
+    <script src="./jsgradient.min.js"></script>
+    <script src="./animated-background.js"></script>
+</body>
+</html>

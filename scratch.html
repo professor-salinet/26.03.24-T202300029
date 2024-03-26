@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./bootstrap.min.css" rel="stylesheet"/>
+    <link href="./all.min.css" rel="stylesheet" >
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    MOVIMENTOS
+    <br>
+    <button onclick="moverParaEsquerda()"> mover para esquerda </button>
+    <button onclick="moverParaDireita()"> mover para direita </button>
+    <button onclick="moverParaCima()"> mover para cima </button>
+    <button onclick="moverParaBaixo()"> mover para baixo </button>
+    <button onclick="girarHorario()">girar sentido horario</button>
+    <button onclick="girarAntiHorario()">girar anti horario</button>
+    <button onclick="deslizarParaDireita()">deslizar para direita</button>
+    <button onclick="deslizarParaEsquerda()">deslizar para esquerda</button>
+    <button onclick="deslizarParaCima()">deslizar para cima</button>
+    <button onclick="deslizarParaBaixo()">deslizar para baixo</button>
+    <button onclick="direçaoE()">aponte para a direçao esquerda</button>
+    <button onclick="direçaoD()">aponte para a direçao direita</button>
+    <button onclick="irPosiçao()">ir para posiçao aleatoria</button>
+    <button onclick="deslizarPosiçao()">deslizar até a posiçao aleatoria</button>
+    <button onclick="seguirM()">seguir o mouse</button>
+    <button onclick="">voltar ao inicio</button>
+    <br>
+    <br>
+    APARÊNCIA
+    <br>
+    <button onclick="">"dizer" oii por "n" segundos</button>
+    <button onclick="">trocar o avatar</button>
+    <button onclick="">trocar cenario</button>
+    <button onclick="">resetar cenario</button>
+    <button onclick="">aumentar avatar</button>
+    <button onclick="">diminuir avatar</button>
+    <button onclick="">mostrar avatar</button>
+    <button onclick="">esconder avatar</button>
+    <br>
+    <br>
+    SOM
+    <br>
+    <button onclick="">tocar o som</button>
+    <button onclick="">parar o som</button>
+    <button onclick="">aumentar o som</button>
+    <button onclick="">diminuir o som</button>
+    <br>
+    <br>
+    <label for="txtPixel">QUANTIDADE DE PIXEL(S):</label>
+    <br>
+    <br>
+    <input type="text" id="txtPixel" value="1">
+    <br>
+    <br>
+    <img src="./0_YFrg-NTFzLxzcoKS.png" id="imgAvatar" style="position: absolute; top: 50px; left: 50px;"/>
+    <script src="./scratch.js"></script>
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./all.min.js"></script>
+    <script src="./main.min.js"></script>
+    <script src="./popper.js"></script>
+</body>
+</html>
